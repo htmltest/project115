@@ -119,6 +119,23 @@ $(document).ready(function() {
         $('.catalogue-sort').toggleClass('open');
     });
 
+    $('.catalogue-sort ul a').click(function(e) {
+        var curLink = $(this);
+        var curSort = curLink.data('value');
+        console.log(curSort);
+        $('.catalogue-sort-current span').html(curLink.html());
+        $('.catalogue-sort').removeClass('open');
+        $('.catalogue-sort ul li.active').removeClass('active');
+        curLink.parent().addClass('active');
+        e.preventDefault();
+    });
+
+    $(document).click(function(e) {
+        if ($(e.target).parents().filter('.catalogue-sort').length == 0) {
+            $('.catalogue-sort').removeClass('open');
+        }
+    });
+
     $('.catalogue-item-compare-link').click(function(e) {
         $(this).toggleClass('active');
         e.preventDefault()

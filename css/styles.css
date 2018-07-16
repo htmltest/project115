@@ -258,16 +258,36 @@ header {height:80px; position:relative; background:#41414b}
     .header-phone-value {font-size:24px}
 }
 
-nav {font-weight:500; font-size:20px; line-height:54px}
+nav {font-weight:500; font-size:20px; line-height:54px; position:relative; z-index:30}
 nav ul {margin:0; padding:0; list-style:none}
 nav ul::after {content:""; display:block; clear:both}
-nav ul li {float:left; margin:0 0 0 80px; padding:0}
+nav ul li {float:left; margin:0 0 0 80px; padding:0; position:relative}
 nav ul li:first-child {margin:0}
 nav ul li::before {display:none}
-nav ul li a {color:#32353e; text-decoration:none}
-@media screen and (min-width:1200px) {
-    nav ul li a:hover {text-decoration:underline}
-}
+nav ul li a {color:#32353e; text-decoration:none; float:left; position:relative}
+nav ul li.active a,
+nav ul li:hover a {color:#cb333b}
+nav ul li.active a::after,
+nav ul li:hover a::after {content:""; display:block; position:absolute; left:0; bottom:0; right:0; height:3px; background:#cb333b}
+nav ul li ul {display:none; position:absolute; left:-65px; padding:48px 0 0 65px; top:100%; background:#fff; font-size:0; line-height:0; letter-spacing:-1px; white-space:nowrap}
+nav ul li:hover ul {display:block}
+nav ul li ul li {float:none; display:inline-block; vertical-align:top; width:210px; padding:0 65px 0 0; margin:0; font-size:20px; line-height:40px; letter-spacing:0; white-space:normal}
+nav ul li:hover ul li a,
+nav ul li.active ul li a,
+nav ul li ul li a {float:none; display:block; color:#41414b}
+nav ul li:hover ul li a:hover,
+nav ul li.active ul li a:hover,
+nav ul li ul li a:hover {color:#cb333b}
+nav ul li.active ul li a::after,
+nav ul li:hover ul li a::after {display:none}
+nav ul li ul li ul {position:static; left:auto; padding:9px 0 61px 0; top:auto; background:none; font-size:15px; font-weight:normal; line-height:24px; letter-spacing:0; white-space:normal}
+nav ul li ul li ul li {float:none; display:block; width:auto; padding:0; margin:10px 0; font-size:15px; line-height:24px}
+nav ul li.active ul li ul li a,
+nav ul li:hover ul li ul li a,
+nav ul li ul li ul li a {color:#060815; display:inline}
+nav ul li.active ul li ul li a:hover,
+nav ul li:hover ul li ul li a:hover,
+nav ul li ul li ul li a:hover {color:#cb333b}
 
 @media screen and (max-width:1199px) {
     nav {display:none}
@@ -428,6 +448,7 @@ nav ul li a {color:#32353e; text-decoration:none}
 .catalogue-sort ul li::before {display:none}
 .catalogue-sort ul li a {display:block; font-size:13px; text-transform:uppercase; line-height:31px; letter-spacing:1.8px; color:#20222e; padding:0 18px; text-decoration:none}
 .catalogue-sort ul li a:hover {text-decoration:underline}
+.catalogue-sort ul li.active {display:none}
 .catalogue-avail {float:left; margin:7px 0 0 27px}
 .catalogue-avail .form-checkbox {margin:0}
 
