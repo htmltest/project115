@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8" />
+        <title>E.G.O.</title>
+
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rubik:400,400i,500,500i&amp;subset=cyrillic" />
+
+        <link rel="stylesheet" href="css/styles.css" />
+        <link rel="stylesheet" href="js/nouislider/nouislider.css">
+        <link rel="stylesheet" href="js/slick/slick.css" />
+        <link rel="stylesheet" href="js/fancybox/jquery.fancybox.css">
+
+        <meta name="viewport" content="width=device-width" />
+    </head>
+
+    <body>
+
+        <!-- wrapper -->
+        <div class="wrapper">
+            <div class="wrapper-inner">
+
+                <header>
+                    <div class="container">
+                        <a href="#" class="header-menu-link"></a>
+
+                        <div class="logo"><a href="#"></a></div>
+
+                        <div class="header-ctrl">
+                            <a href="windows/login.html" class="header-user window-link">Вход</a>
+                            <a href="#" class="header-cart">10</a>
+                        </div>
+
+                        <div class="header-search">
+                            <form action="#" method="post" autocomplete="off">
+                                <div class="header-search-input"><input type="text" name="search" value="" placeholder="поиск..." class="required" autocomplete="off" /></div>
+                                <div class="header-search-submit"><input type="submit" value="" /></div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="header-menu">
+                        <div class="container">
+                            <div class="header-menu-inner">
+                                <div class="header-menu-block">
+                                    <div class="header-menu-block-title"><a href="#">О компании</a></div>
+                                    <ul>
+                                        <li><a href="#">Акции</a></li>
+                                        <li><a href="#">Дизайнерам</a></li>
+                                        <li><a href="#">Блог</a></li>
+                                        <li><a href="#">Бренды</a></li>
+                                    </ul>
+                                </div>
+                                <div class="header-menu-block">
+                                    <div class="header-menu-block-title"><a href="#">Помощь</a></div>
+                                    <ul>
+                                        <li><a href="#">Возврат</a></li>
+                                        <li><a href="#">Доставка и оплата</a></li>
+                                        <li><a href="#">Вопрос ответ</a></li>
+                                        <li><a href="#">Контакты</a></li>
+                                    </ul>
+                                </div>
+                                <div class="header-menu-block">
+                                    <div class="header-menu-block-title"><a href="#">Каталог</a></div>
+                                    <ul>
+                                        <li><a href="#">Мебель</a></li>
+                                        <li><a href="#">Освещение</a></li>
+                                        <li><a href="#">Декор</a></li>
+                                        <li><a href="#">Новинки</a></li>
+                                    </ul>
+                                </div>
+                                <div class="header-menu-block">
+                                    <div class="header-menu-block-title"><a href="#">Блог</a></div>
+                                    <ul>
+                                        <li><a href="#">Новости</a></li>
+                                        <li><a href="#">Акции</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="header-phone">
+                                <div class="header-phone-value"><a href="+70000000000">+7 000 000 00 00</a></div>
+                                <div class="header-phone-callback"><a href="windows/callback.html" class="window-link">Заказать звонок</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+
+                <nav>
+                    <div class="container">
+                        <ul>
+                            <li><a href="#">Новинки</a></li>
+                            <li><a href="#">Мебель</a></li>
+                            <li><a href="#">Декор</a></li>
+                            <li><a href="#">Освещение</a></li>
+                            <li><a href="#">Посуда</a></li>
+                            <li><a href="#">Ковры</a></li>
+                            <li><a href="#">Бытовая техника</a></li>
+                        </ul>
+                    </div>
+                </nav>
+
+                <div class="breadcrumbs">
+                    <div class="container">
+                        <div class="breadcrumbs-inner">
+                            <div class="breadcrumbs-link"><a href="#">Главная</a></div>
+                            <div class="breadcrumbs-link"><a href="#">моя корзина</a></div>
+                            <div class="breadcrumbs-text">оформление заказа</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- container -->
+                <div class="container">
+
+                    <h1>оформление заказа</h1>
+
+                    <!-- order -->
+                    <div class="order">
+                        <form action="#" method="post" autocomplete="off">
+
+                            <!-- order info -->
+                            <div class="order-info">
+                                <div class="order-info-title">личная информация</div>
+
+                                <div class="form-label">ФИО</div>
+                                <div class="form-input"><input type="text" name="name" value="" autocomplete="off" /></div>
+
+                                <div class="form-label">Контактный телефон</div>
+                                <div class="form-input"><input type="text" name="phone" value="" class="maskPhone" autocomplete="off" /></div>
+
+                                <div class="order-info-title">доставка</div>
+
+                                <div class="order-info-delivery">
+                                    <div class="order-info-delivery-item">
+                                        <label>
+                                            <input type="radio" name="delivery" value="1" checked="checked" />
+                                            <div class="order-info-delivery-item-icon order-info-delivery-item-icon-1"><span>Самовывоз</span></div>
+                                        </label>
+                                    </div>
+                                    <div class="order-info-delivery-item">
+                                        <label>
+                                            <input type="radio" name="delivery" value="2" />
+                                            <div class="order-info-delivery-item-icon order-info-delivery-item-icon-2"><span>Доставка<br /> по адресу</span></div>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="order-info-delivery-tabs">
+                                    <div class="order-info-delivery-tab active">
+                                        <div class="order-info-title">пункт самовывоза</div>
+
+                                        <div class="form-label">Город</div>
+                                        <div class="form-input"><input type="text" name="city" value="Владивосток" readonly="true" autocomplete="off" /></div>
+
+                                        <div class="order-info-delivery-checkboxes">
+                                            <div class="form-checkbox">
+                                                <label>
+                                                    <input type="radio" name="cityPoint" value="1" checked="checked" />
+                                                    <div class="form-checkbox-icon"></div>
+                                                    <div class="form-checkbox-text">ул. Льва Толстого, 42В</div>
+                                                </label>
+                                            </div>
+
+                                            <div class="form-checkbox">
+                                                <label>
+                                                    <input type="radio" name="cityPoint" value="2" />
+                                                    <div class="form-checkbox-icon"></div>
+                                                    <div class="form-checkbox-text">ул. Светланская, 50</div>
+                                                </label>
+                                            </div>
+
+                                            <div class="form-checkbox">
+                                                <label>
+                                                    <input type="radio" name="cityPoint" value="3" />
+                                                    <div class="form-checkbox-icon"></div>
+                                                    <div class="form-checkbox-text">ул. Калинина, 50</div>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="order-info-delivery-tab">
+                                        <div class="order-info-title">ваш адрес</div>
+
+                                        <div class="form-label">Город</div>
+                                        <div class="form-input"><input type="text" name="cityClient" value="" autocomplete="off" /></div>
+
+                                        <div class="form-label">Улица</div>
+                                        <div class="form-input"><input type="text" name="street" value="" autocomplete="off" /></div>
+
+                                        <div class="order-info-delivery-tab-client">
+                                            <div class="order-info-delivery-tab-client-item">
+                                                <div class="form-label">Дом</div>
+                                                <div class="form-input"><input type="text" name="build" value="" autocomplete="off" /></div>
+                                            </div>
+                                            <div class="order-info-delivery-tab-client-item">
+                                                <div class="form-label">Квартира</div>
+                                                <div class="form-input"><input type="text" name="float" value="" autocomplete="off" /></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="order-info-title">способ оплаты</div>
+
+                                <div class="order-info-payments">
+                                    <div class="order-info-payments-item">
+                                        <label>
+                                            <input type="radio" name="payments" value="1" checked="checked" />
+                                            <div class="order-info-payments-item-icon order-info-payments-item-icon-1"><span>Онлайн</span></div>
+                                        </label>
+                                    </div>
+                                    <div class="order-info-payments-item">
+                                        <label>
+                                            <input type="radio" name="payments" value="2" />
+                                            <div class="order-info-payments-item-icon order-info-payments-item-icon-2"><span>Наличными<br /> в салоне</span></div>
+                                        </label>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <!-- order info END -->
+
+                            <!-- order cart -->
+                            <div class="order-cart">
+                                <div class="order-cart-content">
+                                    <div class="order-cart-title">корзина</div>
+                                    <div class="order-cart-header">
+                                        <div class="order-cart-header-item">Товар</div>
+                                        <div class="order-cart-header-item">Кол-во</div>
+                                        <div class="order-cart-header-item">Сумма</div>
+                                    </div>
+                                    <div class="order-cart-item" data-price="15000">
+                                        <div class="order-cart-item-name">Квадро</div>
+                                        <div class="order-cart-item-count">
+                                            <div class="order-cart-item-count-field">
+                                                <input type="hidden" name="count[]" value="2" />
+                                                <div class="order-cart-item-count-field-value">2</div>
+                                                <a href="#" class="order-cart-item-count-field-dec">-</a>
+                                                <a href="#" class="order-cart-item-count-field-inc">+</a>
+                                            </div>
+                                        </div>
+                                        <div class="order-cart-item-summ"><span>30 000</span> р.</div>
+                                    </div>
+                                    <div class="order-cart-item" data-price="30000">
+                                        <div class="order-cart-item-name">Роджер</div>
+                                        <div class="order-cart-item-count">
+                                            <div class="order-cart-item-count-field">
+                                                <input type="hidden" name="count[]" value="1" />
+                                                <div class="order-cart-item-count-field-value">1</div>
+                                                <a href="#" class="order-cart-item-count-field-dec">-</a>
+                                                <a href="#" class="order-cart-item-count-field-inc">+</a>
+                                            </div>
+                                        </div>
+                                        <div class="order-cart-item-summ"><span>30 000</span> р.</div>
+                                    </div>
+                                    <div class="order-cart-item" data-price="15000">
+                                        <div class="order-cart-item-name">Сириус</div>
+                                        <div class="order-cart-item-count">
+                                            <div class="order-cart-item-count-field">
+                                                <input type="hidden" name="count[]" value="2" />
+                                                <div class="order-cart-item-count-field-value">2</div>
+                                                <a href="#" class="order-cart-item-count-field-dec">-</a>
+                                                <a href="#" class="order-cart-item-count-field-inc">+</a>
+                                            </div>
+                                        </div>
+                                        <div class="order-cart-item-summ"><span>30 000</span> р.</div>
+                                    </div>
+
+                                    <div class="order-cart-summ">
+                                        <div class="order-cart-summ-row">
+                                            <div class="order-cart-summ-name">Стоимость:</div>
+                                            <div class="order-cart-summ-value"><span class="order-cart-item-pre-summ">90 000</span> р.</div>
+                                        </div>
+                                        <div class="order-cart-summ-row">
+                                            <div class="order-cart-summ-name">Скидка:</div>
+                                            <div class="order-cart-summ-value"><span class="order-cart-item-pre-discount">10 000</span> р.</div>
+                                        </div>
+                                        <div class="order-cart-summ-row order-cart-summ-row-2">
+                                            <div class="order-cart-summ-name">Итого:</div>
+                                            <div class="order-cart-summ-value"><span class="order-cart-item-all-summ">80 000</span> р.</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-submit"><input type="submit" value="Оформить заказ" /></div>
+                            </div>
+                            <!-- order cart END -->
+
+                        </form>
+                    </div>
+                    <!-- order END -->
+
+                </div>
+                <!-- container END -->
+
+            </div>
+        </div>
+        <!-- wrapper END -->
+
+        <footer>
+            <div class="footer-content">
+                <div class="container">
+
+                    <!-- subscribe -->
+                    <div class="subscribe">
+                        <form action="windows/success.html" method="post" autocomplete="off" class="ajax-form">
+                            <div class="subscribe-inner">
+                                <div class="subscribe-input"><input type="text" name="email" value="" placeholder="Введите ваш e-mail и будете первым узнавать обо всех акциях и скидках" class="email required" autocomplete="off" /></div>
+                                <div class="subscribe-submit"><input type="submit" value="OK" /></div>
+                            </div>
+                            <div class="subscribe-checkbox">
+                                <label>
+                                    <input type="checkbox" name="confirm" checked="checked" class="required" />
+                                    <div class="subscribe-checkbox-icon"></div>
+                                    <div class="subscribe-checkbox-text">Я ознакомился и даю согласие на&nbsp;обработку моих персональных данных в&nbsp;соответствии с&nbsp;<a href="#">политикой конфиденциальности</a></div>
+                                </label>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- subscribe END -->
+
+                    <div class="footer-phone">
+                        <div class="footer-phone-value"><a href="+70000000000">+7 000 000 00 00</a></div>
+                        <div class="footer-phone-callback"><a href="windows/callback.html" class="window-link">Заказать звонок</a></div>
+                    </div>
+
+                    <div class="footer-menu">
+                        <div class="footer-menu-block">
+                            <div class="footer-menu-block-title"><a href="#">О компании</a></div>
+                            <ul>
+                                <li><a href="#">Акции</a></li>
+                                <li><a href="#">Дизайнерам</a></li>
+                                <li><a href="#">Блог</a></li>
+                                <li><a href="#">Бренды</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-menu-block">
+                            <div class="footer-menu-block-title"><a href="#">Помощь</a></div>
+                            <ul>
+                                <li><a href="#">Возврат</a></li>
+                                <li><a href="#">Доставка и оплата</a></li>
+                                <li><a href="#">Вопрос ответ</a></li>
+                                <li><a href="#">Контакты</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-menu-block">
+                            <div class="footer-menu-block-title"><a href="#">Каталог</a></div>
+                            <ul>
+                                <li><a href="#">Мебель</a></li>
+                                <li><a href="#">Освещение</a></li>
+                                <li><a href="#">Декор</a></li>
+                                <li><a href="#">Новинки</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-menu-block">
+                            <div class="footer-menu-block-title"><a href="#">Блог</a></div>
+                            <ul>
+                                <li><a href="#">Новости</a></li>
+                                <li><a href="#">Акции</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="footer-notice">Следите за свежими<br /> поступлениями</div>
+
+                </div>
+            </div>
+
+            <div class="copyrights">
+                <div class="container">
+                    ООО «ЭГО», 2018
+                </div>
+            </div>
+        </footer>
+
+        <script src="js/jquery-3.3.1.min.js"></script>
+        <script src="js/validation/jquery.validate.min.js"></script>
+        <script src="js/validation/messages_ru.js"></script>
+        <script src="js/jquery.maskedinput.js"></script>
+        <script src="js/nouislider/nouislider.min.js"></script>
+        <script src="js/nouislider/wNumb.js"></script>
+        <script src="js/slick/slick.min.js"></script>
+        <script src="js/fancybox/jquery.fancybox.min.js"></script>
+        <script src="js/jquery-ui.min.js"></script>
+        <script src="js/modernizr-custom.js"></script>
+        <script src="js/tools.js"></script>
+
+    </body>
+</html>
