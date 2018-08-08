@@ -777,8 +777,9 @@ nav ul li ul li ul li a:hover {color:#cb333b}
 
 .product-photo {float:right; width:611px; position:relative}
 .product-photo-list {position:relative; width:100%; font-size:0; line-height:0; letter-spacing:-1px; white-space:nowrap; overflow:hidden}
-.product-photo-item {display:inline-block; vertical-align:top; width:100%}
-.product-photo-item img {display:block; width:100%}
+.product-photo-item {display:inline-block; vertical-align:top; width:100%; text-align:center}
+.product-photo-list .slick-slide img,
+.product-photo-item img {display:inline-block; max-width:100%; max-height:493px}
 .product-photo-list .slick-prev,
 .product-photo-list .slick-next {display:none !important}
 .product-photo-links {position:absolute; top:20px; right:0}
