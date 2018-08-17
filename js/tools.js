@@ -667,3 +667,31 @@ function windowClose() {
         $('body').css({'margin-right': 0});
     }
 }
+
+$(window).on('load resize', function() {
+
+    $('.catalogue-list').each(function() {
+        var curList = $(this);
+
+        curList.find('.catalogue-item-header').css({'min-height': '0px'});
+
+        curList.find('.catalogue-item-header').each(function() {
+            var curBlock = $(this);
+            var curHeight = curBlock.height();
+            var curTop = curBlock.offset().top;
+
+            curList.find('.catalogue-item-header').each(function() {
+                var otherBlock = $(this);
+                if (otherBlock.offset().top == curTop) {
+                    var newHeight = otherBlock.height();
+                    if (newHeight > curHeight) {
+                        curBlock.css({'min-height': newHeight + 'px', 'line-height': newHeight + 'px'});
+                    } else {
+                        otherBlock.css({'min-height': curHeight + 'px', 'line-height': newHeight + 'px'});
+                    }
+                }
+            });
+        });
+    });
+
+});
