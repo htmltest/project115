@@ -678,17 +678,37 @@ $(window).on('load resize', function() {
 
         curList.find('.catalogue-item-header').each(function() {
             var curBlock = $(this);
-            var curHeight = curBlock.height();
+            var curHeight = curBlock.outerHeight();
             var curTop = curBlock.offset().top;
 
             curList.find('.catalogue-item-header').each(function() {
                 var otherBlock = $(this);
                 if (otherBlock.offset().top == curTop) {
-                    var newHeight = otherBlock.height();
+                    var newHeight = otherBlock.outerHeight();
                     if (newHeight > curHeight) {
-                        curBlock.css({'min-height': newHeight + 'px', 'line-height': newHeight + 'px'});
+                        curBlock.css({'min-height': newHeight + 'px'});
                     } else {
-                        otherBlock.css({'min-height': curHeight + 'px', 'line-height': newHeight + 'px'});
+                        otherBlock.css({'min-height': curHeight + 'px'});
+                    }
+                }
+            });
+        });
+
+        curList.find('.catalogue-item-inner').css({'min-height': '0px'});
+
+        curList.find('.catalogue-item-inner').each(function() {
+            var curBlock = $(this);
+            var curHeight = curBlock.outerHeight();
+            var curTop = curBlock.offset().top;
+
+            curList.find('.catalogue-item-inner').each(function() {
+                var otherBlock = $(this);
+                if (otherBlock.offset().top == curTop) {
+                    var newHeight = otherBlock.outerHeight();
+                    if (newHeight > curHeight) {
+                        curBlock.css({'min-height': newHeight + 'px'});
+                    } else {
+                        otherBlock.css({'min-height': curHeight + 'px'});
                     }
                 }
             });
