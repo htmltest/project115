@@ -540,6 +540,87 @@ $(document).ready(function() {
         $('.project-map').addClass('touchable');
     }
 
+    $('.kitchen-gallery-big').slick({
+        dots: false,
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        adaptiveHeight: true,
+        responsive: [
+            {
+                breakpoint: 767,
+                settings: {
+                    draggable: false,
+                    swipe: false,
+                    touchMove: false
+                }
+            }
+        ]
+    }).on('setPosition', function(slick) {
+        var curSlide = $('.kitchen-gallery-big').slick('slickCurrentSlide');
+        $('.kitchen-gallery-preview a').removeClass('active');
+        $('.kitchen-gallery-preview a').eq(curSlide).addClass('active');
+    });
+
+    $('body').on('click', '.kitchen-gallery-preview a', function(e) {
+        var curIndex = $('.kitchen-gallery-preview a').index($(this));
+        $('.kitchen-gallery-big').slick('slickGoTo', curIndex);
+        e.preventDefault();
+    });
+
+    $(window).on('load resize', function() {
+        $('.kitchen-gallery-preview').each(function() {
+            var curList = $(this);
+            if ($(window).width() < 1200) {
+                if (!curList.hasClass('slick-slider')) {
+                    curList.slick({
+                        infinite: false,
+                        slidesToShow: 3,
+                        slidesToScroll: 3,
+                        adaptiveHeight: true,
+                        prevArrow: '<button type="button" class="slick-prev"></button>',
+                        nextArrow: '<button type="button" class="slick-next"></button>',
+                        dots: false,
+                        responsive: [
+                            {
+                                breakpoint: 767,
+                                settings: {
+                                    slidesToShow: 1,
+                                    slidesToScroll: 1,
+                                }
+                            }
+                        ]
+                    });
+                }
+            } else {
+                if (curList.hasClass('slick-slider')) {
+                    curList.slick('unslick');
+                }
+            }
+        });
+    });
+
+    $('.kitchen-calc-model-name select').change(function() {
+        var curIndex = $(this).find('option').index($(this).find('option:selected'));
+        $('.kitchen-calc-model-photo-item.active').removeClass('active');
+        $('.kitchen-calc-model-photo-item').eq(curIndex).addClass('active');
+    });
+
+    $('.kitchen-calc-type-mobile select').change(function() {
+        var curIndex = $(this).find('option').index($(this).find('option:selected'));
+        $('.kitchen-calc-type-item.active').removeClass('active');
+        $('.kitchen-calc-type-item').eq(curIndex).addClass('active');
+        $('.kitchen-calc-type-header input').eq(curIndex).prop('checked', true);
+    });
+
+    $('.kitchen-calc-type-header input').change(function() {
+        var curIndex = $('.kitchen-calc-type-header input').index($('.kitchen-calc-type-header input:checked'));
+        $('.kitchen-calc-type-item.active').removeClass('active');
+        $('.kitchen-calc-type-item').eq(curIndex).addClass('active');
+        $('.kitchen-calc-type-mobile select option').eq(curIndex).prop('selected', true);
+    });
+
 });
 
 function recalcCart() {
@@ -562,8 +643,15 @@ function recalcCart() {
     $('.order-cart-item-all-summ').html(String(allSumm - couponDiscount).replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1 '));
 }
 
+$(window).on('resize', function() {
+    $('.form-select select').chosen('destroy');
+    $('.form-select select').chosen({disable_search: true, placeholder_text_multiple: ' ', no_results_text: 'Нет результатов'});
+});
+
 function initForm(curForm) {
     curForm.find('input.maskPhone').mask('+7 (999) 999-99-99');
+
+    curForm.find('.form-select select').chosen({disable_search: true, placeholder_text_multiple: ' ', no_results_text: 'Нет результатов'});
 
     curForm.validate({
         ignore: '',

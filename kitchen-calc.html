@@ -139,8 +139,7 @@
                     <div class="container">
                         <div class="breadcrumbs-inner">
                             <div class="breadcrumbs-link"><a href="#">Главная</a></div>
-                            <div class="breadcrumbs-link"><a href="#">личный кабинет</a></div>
-                            <div class="breadcrumbs-text">списки</div>
+                            <div class="breadcrumbs-text">Рассчитать стоимость кухни</div>
                         </div>
                     </div>
                 </div>
@@ -148,85 +147,127 @@
                 <!-- container -->
                 <div class="container">
 
-                    <h1>личный кабинет</h1>
+                    <h1>Рассчитать стоимость кухни</h1>
 
-                    <!-- cabinet -->
-                    <div class="cabinet">
+                    <!-- kitchen calc -->
+                    <div class="kitchen-calc">
+                        <form action="windows/success.html" method="post" class="ajax-form">
 
-                        <!-- cabinet side -->
-                        <div class="cabinet-side">
-                            <div class="cabinet-block">
-                                <div class="cabinet-block-title">личные данные</div>
-                                <p>Карнавальный Иннокентий Вячеславочич</p>
-                                <p>+7 900 777 88 99</p>
-                                <p>karnaval_99@gmai.com</p>
-                                <div class="cabinet-block-link"><a href="#">изменить</a></div>
-                            </div>
-
-                            <div class="cabinet-block">
-                                <div class="cabinet-block-title">управление рассылками</div>
-                                <form action="#" method="post">
-                                    <div class="form-checkbox">
-                                        <label>
-                                            <input type="checkbox" name="subscribeNews" checked="checked" />
-                                            <div class="form-checkbox-icon"></div>
-                                            <div class="form-checkbox-text">Рассылка новостей на e-mail</div>
-                                        </label>
-                                    </div>
-                                    <div class="form-checkbox">
-                                        <label>
-                                            <input type="checkbox" name="subscribeProduct" />
-                                            <div class="form-checkbox-icon"></div>
-                                            <div class="form-checkbox-text">Товар дня (ежедневно)</div>
-                                        </label>
-                                    </div>
-                                    <div class="form-submit"><input type="submit" value="сохранить" /></div>
-                                </form>
-                            </div>
-                        </div>
-                        <!-- cabinet side END -->
-
-                        <!-- cabinet container -->
-                        <div class="cabinet-container">
-                            <div class="cabinet-content">
-
-                                <div class="blog-menu">
-                                    <ul>
-                                        <li><a href="#">Списки</a></li>
-                                        <li><a href="#">Избранное</a></li>
-                                        <li class="active"><a href="#">Заказы</a></li>
-                                    </ul>
-                                </div>
-
-                                <!-- cabinet orders -->
-                                <div class="cabinet-orders">
-                                    <div class="cabinet-order cabinet-order-status-process">
-                                        <div class="cabinet-order-number"><div>01</div></div>
-                                        <div class="cabinet-order-cell"><a href="#">Заказ №5688900</a></div>
-                                        <div class="cabinet-order-cell">22.08.2018</div>
-                                        <div class="cabinet-order-cell cabinet-order-status">В обработке</div>
-                                        <div class="cabinet-order-cell">сумма: <strong>66 000</strong> р.</div>
-                                        <div class="cabinet-order-remove"><a href="#"></a></div>
-                                    </div>
-                                    <div class="cabinet-order cabinet-order-status-archive">
-                                        <div class="cabinet-order-number"><div>02</div></div>
-                                        <div class="cabinet-order-cell"><a href="#">Заказ №5688900</a></div>
-                                        <div class="cabinet-order-cell">22.08.2018</div>
-                                        <div class="cabinet-order-cell cabinet-order-status">В обработке</div>
-                                        <div class="cabinet-order-cell">сумма: <strong>66 000</strong> р.</div>
-                                        <div class="cabinet-order-remove"><a href="#"></a></div>
+                            <div class="kitchen-calc-model">
+                                <div class="kitchen-calc-model-side">
+                                    <div class="kitchen-calc-title">1. Выберите модель кухни</div>
+                                    <div class="kitchen-calc-model-name">
+                                        <div class="form-select">
+                                            <select name="type">
+                                                <option value="Нуар Дуо">Нуар Дуо</option>
+                                                <option value="Модена">Модена</option>
+                                                <option value="Палермо">Палермо</option>
+                                                <option value="Тэсс Эко">Тэсс Эко</option>
+                                                <option value="Онда">Онда</option>
+                                                <option value="Тайм">Тайм</option>
+                                            </select>
+                                        </div>
                                     </div>
                                 </div>
-                                <!-- cabinet orders END -->
-
-                                <div class="cabinet-orders-clear"><a href="#">очистить историю</a></div>
-
+                                <div class="kitchen-calc-model-photo">
+                                    <div class="kitchen-calc-model-photo-item active"><img src="files/kitchen-calc-1.jpg" alt="" /></div>
+                                    <div class="kitchen-calc-model-photo-item"><img src="files/kitchen-calc-2.jpg" alt="" /></div>
+                                    <div class="kitchen-calc-model-photo-item"><img src="files/kitchen-calc-3.jpg" alt="" /></div>
+                                    <div class="kitchen-calc-model-photo-item"><img src="files/kitchen-calc-4.jpg" alt="" /></div>
+                                    <div class="kitchen-calc-model-photo-item"><img src="files/kitchen-calc-5.jpg" alt="" /></div>
+                                    <div class="kitchen-calc-model-photo-item"><img src="files/kitchen-calc-6.jpg" alt="" /></div>
+                                </div>
                             </div>
-                        </div>
-                        <!-- cabinet container END -->
 
+                            <div class="kitchen-calc-title">2. Выберите тип кухни</div>
+
+                            <div class="kitchen-calc-type-mobile">
+                                <div class="form-select">
+                                    <select name="typeadd">
+                                        <option value="1" selected="selected">Прямая</option>
+                                        <option value="2">Угловая</option>
+                                        <option value="3">П-образная</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="kitchen-calc-type">
+                                <div class="kitchen-calc-type-item active">
+                                    <label class="kitchen-calc-type-header">
+                                        <input type="radio" name="type" value="1" checked="checked" />
+                                        <div class="kitchen-calc-type-header-inner">
+                                            <div class="kitchen-calc-type-header-img"><img src="images/kitchen-calc-type-1.png" alt="" /></div>
+                                            <div class="kitchen-calc-type-header-title">Прямая</div>
+                                        </div>
+                                    </label>
+                                    <div class="kitchen-calc-type-fields">
+                                        <div class="form-label">Длина, м:</div>
+                                        <div class="form-input"><input type="text" name="type1width" value="" autocomplete="off" /></div>
+                                    </div>
+                                </div>
+                                <div class="kitchen-calc-type-item">
+                                    <label class="kitchen-calc-type-header">
+                                        <input type="radio" name="type" value="2" />
+                                        <div class="kitchen-calc-type-header-inner">
+                                            <div class="kitchen-calc-type-header-img"><img src="images/kitchen-calc-type-2.png" alt="" /></div>
+                                            <div class="kitchen-calc-type-header-title">Угловая</div>
+                                        </div>
+                                    </label>
+                                    <div class="kitchen-calc-type-fields">
+                                        <div class="form-label">Длина 1й cтены, м:</div>
+                                        <div class="form-input"><input type="text" name="type2width1" value="" autocomplete="off" /></div>
+                                        <div class="form-label">Длина 2й cтены, м:</div>
+                                        <div class="form-input"><input type="text" name="type2width2" value="" autocomplete="off" /></div>
+                                    </div>
+                                </div>
+                                <div class="kitchen-calc-type-item">
+                                    <label class="kitchen-calc-type-header">
+                                        <input type="radio" name="type" value="3" />
+                                        <div class="kitchen-calc-type-header-inner">
+                                            <div class="kitchen-calc-type-header-img"><img src="images/kitchen-calc-type-3.png" alt="" /></div>
+                                            <div class="kitchen-calc-type-header-title">П-образная</div>
+                                        </div>
+                                    </label>
+                                    <div class="kitchen-calc-type-fields">
+                                        <div class="form-label">Длина 1й cтены, м:</div>
+                                        <div class="form-input"><input type="text" name="type3width1" value="" autocomplete="off" /></div>
+                                        <div class="form-label">Длина 2й cтены, м:</div>
+                                        <div class="form-input"><input type="text" name="type3width2" value="" autocomplete="off" /></div>
+                                        <div class="form-label">Длина 3й cтены, м:</div>
+                                        <div class="form-input"><input type="text" name="type3width3" value="" autocomplete="off" /></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="kitchen-calc-title">3. Введите контактные данные</div>
+
+                            <div class="kitchen-calc-contacts">
+                                <div class="kitchen-calc-contacts-item">
+                                    <div class="form-label">Ваше имя</div>
+                                    <div class="form-input"><input type="text" name="name" value="" class="required" autocomplete="off" /></div>
+                                </div>
+                                <div class="kitchen-calc-contacts-item">
+                                    <div class="form-label">Телефон</div>
+                                    <div class="form-input"><input type="text" name="phone" value="" class="required maskPhone" autocomplete="off" /></div>
+                                </div>
+                                <div class="kitchen-calc-contacts-item">
+                                    <div class="form-label">E-mail</div>
+                                    <div class="form-input"><input type="text" name="email" value="" class="required email" autocomplete="off" /></div>
+                                </div>
+                            </div>
+
+                            <div class="form-checkbox">
+                                <label>
+                                    <input type="checkbox" name="remember" checked="checked" class="required" />
+                                    <div class="form-checkbox-icon"></div>
+                                    <div class="form-checkbox-text">Я ознакомился и даю согласие на&nbsp;обработку моих персональных данных в&nbsp;соответствии с&nbsp;<a href="#">политикой конфиденциальности</a></div>
+                                </label>
+                            </div>
+
+                            <div class="form-submit"><input type="submit" value="Рассчитать" /></div>
+                        </form>
                     </div>
-                    <!-- cabinet END -->
+                    <!-- kitchen calc END -->
 
                 </div>
                 <!-- container END -->
