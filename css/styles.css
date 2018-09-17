@@ -1823,7 +1823,7 @@ footer {position:relative; margin:-417px 0 0 0}
     .kitchens-item {width:100%; padding:15px}
 }
 
-.kitchen-start {height:735px; position:relative; background:no-repeat center; background-size:auto 100%}
+.kitchen-start {height:735px; position:relative; background:no-repeat center; background-size:cover}
 .kitchen-start::before {content:""; display:block; position:absolute; left:0; top:0; right:0; bottom:0; background:rgba(60, 60, 77, 0.5)}
 .kitchen-start-content {position:absolute; left:0; top:50%; right:0; transform:translateY(-50%); text-align:center}
 .kitchen-start-title {font-size:120px; line-height:120px; letter-spacing:25.2px; text-transform:uppercase; color:#fff; font-weight:500}

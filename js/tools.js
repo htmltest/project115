@@ -288,7 +288,7 @@ $(document).ready(function() {
         e.preventDefault();
     });
 
-    $('.product-descr-big a, .product-descr-gallery-item a').fancybox({
+    $('.product-descr-big a, .product-descr-gallery-item a, .kitchen-gallery-big a').fancybox({
         buttons : [
             'close'
         ],
